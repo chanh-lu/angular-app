@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "angularapp", "angularapp\angularapp.esproj", "{AB735BF0-55B9-406A-BAE5-6C8D625C2DAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csproj", "{79808F3A-D617-4AC1-956B-952F7B15EDDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{070DA894-680F-4C39-8E1D-E85749425914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi.tests", "webapi.tests\webapi.tests.csproj", "{F17AA300-1031-4566-B47C-F530A97F5FE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB735BF0-55B9-406A-BAE5-6C8D625C2DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB735BF0-55B9-406A-BAE5-6C8D625C2DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB735BF0-55B9-406A-BAE5-6C8D625C2DAA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB735BF0-55B9-406A-BAE5-6C8D625C2DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB735BF0-55B9-406A-BAE5-6C8D625C2DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB735BF0-55B9-406A-BAE5-6C8D625C2DAA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{79808F3A-D617-4AC1-956B-952F7B15EDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79808F3A-D617-4AC1-956B-952F7B15EDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79808F3A-D617-4AC1-956B-952F7B15EDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79808F3A-D617-4AC1-956B-952F7B15EDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F17AA300-1031-4566-B47C-F530A97F5FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F17AA300-1031-4566-B47C-F530A97F5FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F17AA300-1031-4566-B47C-F530A97F5FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F17AA300-1031-4566-B47C-F530A97F5FE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F17AA300-1031-4566-B47C-F530A97F5FE1} = {070DA894-680F-4C39-8E1D-E85749425914}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {064361B0-C483-473D-A87C-4D26C9CB2B6E}
+	EndGlobalSection
+EndGlobal
