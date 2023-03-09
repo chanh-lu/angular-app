@@ -12,21 +12,12 @@ public class RegisterControllerTest
     private readonly RegisterController _subject = new(MockFileService.Object);
 
     [Fact]
-    public async Task Post_Should_Update_File_With_Users()
+    public async Task Post_Should_Append_User()
     {
-        MockFileService
-            .Setup(x => x.GetAsync())
-            .Returns(Task.FromResult<IEnumerable<UserModel>>(Array.Empty<UserModel>()));
-
-        await _subject.Post(new UserModel());
+        await _subject.Post(It.IsAny<UserModel>());
 
         MockFileService.Verify(
-            x => x.GetAsync(),
-            Times.Once
-        );
-
-        MockFileService.Verify(
-            x => x.UpdateAsync(It.IsAny<IEnumerable<UserModel>>()),
+            x => x.AppendAsync(It.IsAny<UserModel>()),
             Times.Once
         );
     }

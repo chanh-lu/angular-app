@@ -1,15 +1,30 @@
 <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
-  <label for="firstname">First Name</label>
-  <input id="firstname" type="text" formControlName="firstName" />
-  <em *ngIf="validateControl('firstName') && hasError('firstName', 'required')">required</em>
-
+  <div class="row">
+    <div class="col">
+      <label for="first-name">First Name</label>
+      <input
+        id="first-name"
+        type="text"
+        formControlName="firstName"
+        class="form-control"
+      />
+      <em *ngIf="validateControl('firstName')">required</em>
+    </div>
+    <div class="col">
+      <label for="last-name">Last Name</label>
+      <input
+        id="last-name"
+        type="text"
+        formControlName="lastName"
+        class="form-control"
+      />
+      <em *ngIf="validateControl('lastName')">required</em>
+    </div>
+  </div>
   <br />
-
-  <label for="lastname">Last Name</label>
-  <input id="lastname" type="text" formControlName="lastName" />
-  <em *ngIf="validateControl('firstName') && hasError('firstName', 'required')">required</em>
-
-  <br />
-
-  <button type="submit">Submit</button>
+  <div class="row">
+    <div class="col">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
 </form>

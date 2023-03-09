@@ -16,7 +16,7 @@ public class UserFileServiceTest
     );
 
     [Fact]
-    public async Task GetAsync_Should_Returns_Users()
+    public async Task ReadAsync_Should_Returns_Users()
     {
         var expected = new[]
         {
@@ -31,15 +31,19 @@ public class UserFileServiceTest
             .Setup(x => x.ReadToEndAsync(It.IsAny<string>()))
             .Returns(Task.FromResult(JsonConvert.SerializeObject(expected)));
 
-        var result = await _subject.GetAsync();
+        var result = await _subject.ReadAsync();
 
         Assert.Equivalent(expected, result);
     }
 
     [Fact]
-    public async Task UpdateAsync_Should_Write_To_File()
+    public async Task AppendAsync_Should_Update_File()
     {
-        await _subject.UpdateAsync(It.IsAny<IEnumerable<UserModel>>());
+        MockStreamReaderService
+            .Setup(x => x.ReadToEndAsync(It.IsAny<string>()))
+            .Returns(Task.FromResult("[]"));
+
+        await _subject.AppendAsync(new UserModel());
 
         MockStreamWriterService.Verify(
             x => x.WriteLineAsync(It.IsAny<string>(), It.IsAny<string>()),

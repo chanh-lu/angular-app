@@ -17,17 +17,8 @@ public class RegisterController : ControllerBase
 
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] UserModel userModel)
-    {
-        var users = (await _userFileService.GetAsync()).ToList();
-
-        users.Add(new UserModel
-        {
-            FirstName = userModel.FirstName,
-            LastName = userModel.LastName
-        });
-
-        await _userFileService.UpdateAsync(users);
-
+    {      
+        await _userFileService.AppendAsync(userModel);
         return Ok();
     }
 }
