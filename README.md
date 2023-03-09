@@ -4,6 +4,8 @@ A simple web app containing a form for users to submit their names. A backend se
 
 # Requirements
 
+For windows machine:
+
 - [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 - [Node.js v16+](https://nodejs.org/en/)
 - [Angular CLI v15+](https://angular.io/cli#installing-angular-cli)
@@ -30,4 +32,4 @@ Application will be available on https://localhost:4200
 
 For tests, run `npm run test`
 
-> The `proxy.config.js` is targeting https://localhost:7294. If you changed your webapi port, then make sure to uppdate the target in proxy.config.js
+> The `/src/proxy.config.js` is targeting https://localhost:7294. If you changed your webapi port, then make sure to update the target in proxy.config.js
